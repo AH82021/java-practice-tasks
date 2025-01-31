@@ -1,5 +1,7 @@
 package tasks;
 
+
+
 /**
  * Task: Classes & Objects (Practical Example)
  *
@@ -181,21 +183,33 @@ package tasks;
  *
  * **Happy Coding!** 🚗✨
  */
-public class Task_ClassesAndObjects {
-
+public class Car {
     public static void main(String[] args) {
-        // TODO: Create and test your Car objects here.
+        Car car1 = new Car("Red", 2020, "Toyota", "Camry", 15000.5);
+        Car car2 = new Car("Blue", 2018, "Honda", "Civic", 30000.0);
+    }
 
-        // Example Usage:
+
+    private String color;
+    private int year;
+    private String make;
+    private String model;
+    private double mileage;
+
+    //constructor
+    public Car(String color, int year, String make, String model, double mileage) {
+        this.color = color;
+        this.year = year;
+        this.make = make;
+        this.model = model;
+        this.mileage = mileage;
+
+
 
         /*
         // Creating Car objects
-        Car car1 = new Car("Toyota", "Camry", 2020, "Red", 15000.5);
-        Car car2 = new Car("Honda", "Civic", 2018, "Blue", 30000.0);
-
-        // Interacting with car1
-        car1.startEngine();
-        car1.drive(120.5);
+        Car car1 = new Car("Toyota", "Camry", 2020, "Red", 15        car1.startEngine();
+        car1
         car1.repaint("Black");
         car1.displayInfo();
 
