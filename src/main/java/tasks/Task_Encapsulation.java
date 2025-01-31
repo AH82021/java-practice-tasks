@@ -80,9 +80,25 @@ class BankAccount{
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+
+    public void deposit(double amount){
+        if(amount>0){
+
+         balance = amount + balance;//balance that u have in the bank
+        }
+
     }
+
+public void withdraw(double amount){
+        if(amount>0 && balance>=amount ){
+            balance = balance-amount;
+        }else {
+            System.out.println("insufficient amount");
+        }
+
+}
+
+
 
     @Override
     public String toString() {
@@ -98,12 +114,12 @@ public class Task_Encapsulation {
         // TODO: Create and test your BankAccount class here or in a separate file.
 
         // Example (pseudo-code):
-        /*
+
         BankAccount account = new BankAccount();
         account.setAccountNumber("1234567890");
         account.deposit(500);
-        account.withdraw(200);
+        account.withdraw(1200);
         System.out.println("Balance: " + account.getBalance());
-        */
+
     }
 }
