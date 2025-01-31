@@ -181,9 +181,10 @@ package tasks;
  *
  * **Happy Coding!** 🚗✨
  */
+
 public class Task_ClassesAndObjects {
 
-    public static void main(String[] args) {
+   // public static void main(String[] args) {
         // TODO: Create and test your Car objects here.
 
         // Example Usage:
@@ -205,7 +206,7 @@ public class Task_ClassesAndObjects {
         car2.stopEngine();
         car2.displayInfo();
         */
-    }
+   // }
 }
 
 /**
@@ -214,3 +215,9 @@ public class Task_ClassesAndObjects {
  * Description:
  *   Represents a car with basic attributes and behaviors.
  */
+ class Car{
+    public static void main(String[] args){
+        System.out.println("Hello World");
+    }
+
+}
