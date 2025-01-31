@@ -167,6 +167,8 @@ package tasks;
  *
  * Final Notes:
  *
+ *
+ *
  * - **Practice Regularly:**
  *   - The more you work with classes and objects, the more comfortable you'll become with OOP concepts.
  *
@@ -181,14 +183,85 @@ package tasks;
  *
  * **Happy Coding!** 🚗✨
  */
-public class Task_ClassesAndObjects {
+
+class Car{
+    private String make;
+    private String model;
+    private int year;
+    private String color;
+    private double mileage;
+
+
+    public Car(){
+
+    }
+
+     public Car(String make, String model, int year, String color, double mileage){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.mileage = mileage;
+
+     }
+
+public void startEngine(){
+
+        System.out.println("Engine is running");
+}
+
+public void stopEngine(){
+    System.out.println("Engine stopped");
+}
+
+public void drive(double mileage) {
+    if (mileage > 0) {
+        this.mileage = this.mileage+ mileage;
+        System.out.println("the current mileage is " + this.mileage);
+    } else {
+        System.out.println("wrong mileage entered");
+    }
+}
+
+public void repaint(String newColor){
+      if(newColor.length()>=3){
+          this.color = newColor;
+          System.out.println("the current car color is " + this.color);
+      }else {
+          System.out.println("user entered wrong color ");
+      }
+}
+
+public void displayInfo(){
+
+    System.out.println("Car{" +
+            "make='" + make + '\'' +
+            ", model='" + model + '\'' +
+            ", year=" + year +
+            ", color='" + color + '\'' +
+            ", mileage=" + mileage +
+            '}');
+}
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                ", color='" + color + '\'' +
+                ", mileage=" + mileage +
+                '}';
+    }
+}
+public class  Task_ClassesAndObjects {
 
     public static void main(String[] args) {
         // TODO: Create and test your Car objects here.
 
         // Example Usage:
 
-        /*
+
         // Creating Car objects
         Car car1 = new Car("Toyota", "Camry", 2020, "Red", 15000.5);
         Car car2 = new Car("Honda", "Civic", 2018, "Blue", 30000.0);
@@ -203,8 +276,9 @@ public class Task_ClassesAndObjects {
         car2.startEngine();
         car2.drive(200.0);
         car2.stopEngine();
+        car2.repaint("black");
         car2.displayInfo();
-        */
+
     }
 }
 
