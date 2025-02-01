@@ -182,6 +182,12 @@ package tasks;
  * **Happy Coding!** 🚗✨
  */
 public class Task_ClassesAndObjects {
+    public class Car {
+        private String make;
+        private String model;
+        private int year;
+
+    }
 
     public static void main(String[] args) {
         // TODO: Create and test your Car objects here.
