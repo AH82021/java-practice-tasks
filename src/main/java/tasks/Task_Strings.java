@@ -25,8 +25,27 @@ package tasks;
  */
 public class Task_Strings {
 
-    public static void main(String[] args) {
+
+
+
+
+        public static void main(String[] args) {
         // TODO: Create sample strings and test each string operation method here.
+
+            String s1 = "hello world";
+            String s2 = " hello java";
+            String s3 = " hello yaya";
+            String s4 = " adeel";
+            String s5 = "my son";
+            //convert to uppercase
+            String upper = convertToUpperCase( s1) ;
+            String lower = convertToLowerCase( s2) ;
+            //
+            System.out.println(upper);
+            System.out.println(lower);
+
+
+
 
         /*
         // Example Usage:
@@ -59,16 +78,17 @@ public class Task_Strings {
 
     /**
      * Task 1: Concatenate Two Strings
+     *      *
+     *       *description:
+     *      * - Concatenate two given strings and return the resulting string.
+     *      *
+     *      * Method Signature:
+     *      * - public stat
+     *      ic String concatenateStrings(String str1, String str2)
      *
-     * Description:
-     * - Concatenate two given strings and return the resulting string.
-     *
-     * Method Signature:
-     * - public static String concatenateStrings(String str1, String str2)
-     *
-     * TODO:
-     * - Combine str1 and str2 using the `+` operator or `concat` method.
-     * - Return the concatenated string.
+     * TODO:method.
+     *      *
+     * - Combine str1 and str2 using the `+` operator or `concat`  - Return the concatenated string.
      */
     public static String concatenateStrings(String str1, String str2) {
         // TODO: Implement logic to concatenate two strings.
@@ -342,6 +362,7 @@ public class Task_Strings {
      * - Return the string without duplicates.
      */
     public static String removeDuplicates(String str) {
+
         // TODO: Implement logic to remove duplicate characters from the string.
         return null; // Placeholder return value
     }
