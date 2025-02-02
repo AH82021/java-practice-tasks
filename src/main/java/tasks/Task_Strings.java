@@ -32,17 +32,38 @@ public class Task_Strings {
         public static void main(String[] args) {
         // TODO: Create sample strings and test each string operation method here.
 
-            String s1 = "hello world";
-            String s2 = " hello java";
-            String s3 = " hello yaya";
-            String s4 = " adeel";
-            String s5 = "my son";
+            String s1 = "hello ";
+            String s2 = "java";
+            String s3 = "hello ";
+            String s4 = "adeel";
+            String s5 = " my son";
+            String s6 = ".";
+            String s7 = "your so cute my baby boy";
+
             //convert to uppercase
             String upper = convertToUpperCase( s1) ;
             String lower = convertToLowerCase( s2) ;
             //
             System.out.println(upper);
             System.out.println(lower);
+
+
+            //2nd tasks call the  to concatenate strings methode
+
+            String res = concatenateStrings( s1,s2 );
+            //print the concatenated res
+            System.out.println(res);
+            //
+            String res1 = concatenateString( s3,s4,s5,s6,s7);
+
+            System.out.println(res1);
+            //task 3 print length of string
+
+            System.out.println("length of the string:"+ s6.length());
+            System.out.println(s7.length());
+
+
+
 
 
 
@@ -90,9 +111,12 @@ public class Task_Strings {
      *      *
      * - Combine str1 and str2 using the `+` operator or `concat`  - Return the concatenated string.
      */
-    public static String concatenateStrings(String str1, String str2) {
+    public static String concatenateStrings(String s1, String s2) {
         // TODO: Implement logic to concatenate two strings.
-        return null; // Placeholder return value
+        return  s1 + s2; // Placeholder return value
+    }
+    public static String concatenateString(String s3, String s4 , String s5, String s6, String s7){
+        return s3.concat( s4 ).concat( s5 ).concat( s6 ).concat( s7 );
     }
 
     /**
@@ -108,8 +132,10 @@ public class Task_Strings {
      * - Use the `length()` method to determine the string's length.
      * - Print the length to the console.
      */
-    public static void printStringLength(String str) {
+    public static void printStringLength(String s6) {
         // TODO: Implement logic to print the length of the string.
+
+
     }
 
     /**
