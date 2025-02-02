@@ -187,7 +187,20 @@ public class Task_ClassesAndObjects {
         // TODO: Create and test your Car objects here.
 
         // Example Usage:
+        Car car1 = new Car("Porche", "911", 2020, "Red", 16000);
+        Car car2 = new Car("Laborghini", "avendor", 2022, "Blue", 18000);
 
+        car1.startEngine();
+        car1.drive(120.5);
+        car1.repaint("Black");
+        car1.displayInfo();
+
+        System.out.println("");
+
+        car2.startEngine();
+        car2.drive(200.0);
+        car2.stopEngine();
+        car2.displayInfo();
         /*
         // Creating Car objects
         Car car1 = new Car("Toyota", "Camry", 2020, "Red", 15000.5);
@@ -214,3 +227,43 @@ public class Task_ClassesAndObjects {
  * Description:
  *   Represents a car with basic attributes and behaviors.
  */
+class Car {
+    private String make;
+    private String model;
+    private String color;
+    private int gear;
+    private double mileage;
+
+    public Car(String make, String model, int gear, String color, double mileage) {
+        this.make = make;
+        this.model = model;
+        this.color = color;
+        this.gear = gear;
+        this.mileage = mileage;
+    }
+
+    public void startEngine() {
+        System.out.println("Vroom Vroom");;
+    }
+
+    public void stopEngine() {
+        System.out.println("Stop Stop");;
+    }
+
+    public void drive(double mileage) {
+        double c = this.mileage += mileage;
+        if(c > 0)
+            System.out.println(c);
+    }
+
+    public void repaint(String newColor) {
+        String x =this.color = newColor;
+        if(x != null || x != "")
+            System.out.println(x);
+    }
+
+    public void displayInfo() {
+        System.out.println("Make: " + this.make + " Model: " + this.model + " Color: " + this.color + " Gear: " + this.gear + " Mileage: " + this.mileage);
+    }
+
+}
