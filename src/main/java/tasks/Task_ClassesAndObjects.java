@@ -230,6 +230,16 @@ public class Task_ClassesAndObjects {
             return mileage;
         }
 
+        @Override
+        public String toString() {
+            return "Car{" +
+                    "make='" + make + '\'' +
+                    ", model='" + model + '\'' +
+                    ", year=" + year +
+                    ", color='" + color + '\'' +
+                    ", mileage=" + mileage +
+                    '}';
+        }
     }
 
     public static void main(String[] args) {
