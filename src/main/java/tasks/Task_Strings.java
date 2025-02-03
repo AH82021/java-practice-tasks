@@ -77,14 +77,20 @@ public class Task_Strings {
 
     /**
      * Task 2: Print Length of a String
-     public class Demo{
-        public static void main(String[] args) {
-            String greet = "Hello world";
-            System.out.println("String" + greet);
-            int lenth = greet.length();
-            System.out.println("Lenth"+lenth);
-
-    
+     *
+     * Description:
+     * - Print the length of the given string.
+     *
+     * Method Signature:
+     * - public static void printStringLength(String str)
+     *
+     * TODO:
+     * - Use the `length()` method to determine the string's length.
+     * - Print the length to the console.
+     */
+    public static void printStringLength(String str) {
+        // TODO: Implement logic to print the length of the string.
+    }
 
     /**
      * Task 3: Convert String to Uppercase
@@ -207,16 +213,10 @@ public class Task_Strings {
      * - Use the `indexOf()` method to find the character's index.
      * - Return the index, or -1 if the character is not found.
      */
-    public class Demo{
-        public static void main(String[] args) {
-            String str1 ="coding is my passaint";
-            int result;
-                        result = str1.indexOf('g');
-            System.out.println(result);
-
-        }
-        }
-    
+    public static int findIndexOfChar(String str, char ch) {
+        // TODO: Implement logic to find the index of a character.
+        return -1; // Placeholder return value
+    }
 
     /**
      * Task 10: Extract a Substring

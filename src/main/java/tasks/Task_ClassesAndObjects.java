@@ -177,14 +177,8 @@ package tasks;
  *   - Share your code with peers or instructors to receive feedback and improve your implementation.
  *
  * - **Refer to Documentation:**
- *   - Utilize Java's official documentation and other resources to explore more about classes, objects, and OOP principles.
- *
- * **Happy Coding!** 🚗✨
- */
-public class Task_ClassesAndObjects {
+ *   - Utilize Jav
 
-    public static void main(String[] args) {
-        // TODO: Create and test your Car objects here.
 
         // Example Usage:
 
@@ -205,12 +199,12 @@ public class Task_ClassesAndObjects {
         car2.stopEngine();
         car2.displayInfo();
         */
-    }
-}
+//    }
+//}
 
 /**
  * Class: Car
  *
  * Description:
  *   Represents a car with basic attributes and behaviors.
- */
+
