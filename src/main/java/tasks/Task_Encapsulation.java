@@ -19,8 +19,7 @@ package tasks;
  *
  *   2. **Provide public getters and setters** for these private fields, maintaining appropriate
  *      validation and data constraints.
- *      - Example: The setter for `accountNumber` can validate if the account format is correct.
- *      - Example: The getter for `balance` can simply return the current balance.
+ *
  *
  *   3. **Implement the deposit and withdraw methods**:
  *      - `deposit(double amount)`:
@@ -55,6 +54,50 @@ package tasks;
  * No solution is provided here; you must implement the logic as an exercise.
  */
 public class Task_Encapsulation {
+    public  class BankAcount {
+
+        // instance variable
+
+         private String accountNumber;
+         private double balance;
+
+         // create constructor parameterized
+
+        @Override
+        public String toString() {
+            return "BankAcount{" +
+                    "accountNumber='" + accountNumber + '\'' +
+                    ", balance=" + balance +
+                    '}';
+        }
+
+        public BankAcount(String accountNumber, double balance){
+            this.accountNumber=accountNumber;
+            this.balance=balance;
+
+            //to string methode
+
+
+
+        }
+
+        // getter
+
+
+        public String getAccountNumber() {
+            return accountNumber;
+        }
+
+        //setter
+
+
+        public void setAccountNumber(String accountNumber) {
+            this.accountNumber = accountNumber;
+        }
+
+        //
+
+    }
 
     public static void main(String[] args) {
         // TODO: Create and test your BankAccount class here or in a separate file.

@@ -40,32 +40,39 @@ public class Task_Strings {
             String s6 = ".";
             String s7 = "your so cute my baby boy";
 
-            //convert to uppercase
-            String upper = convertToUpperCase( s1) ;
-            String lower = convertToLowerCase( s2) ;
-            //
-            System.out.println(upper);
-            System.out.println(lower);
 
 
-            //2nd tasks call the  to concatenate strings methode
+            // task one  call to concatenate strings methode
 
             String res = concatenateStrings( s1,s2 );
+
             //print the concatenated res
+
             System.out.println(res);
             //
             String res1 = concatenateString( s3,s4,s5,s6,s7);
 
             System.out.println(res1);
-            //task 3 print length of string
+
+
+            //task 2 print lengths of the given  strings:
 
             System.out.println("length of the string:"+ s6.length());
             System.out.println(s7.length());
+            System.out.println(s5.length());
+            System.out.println(s4.length());
+            System.out.println(s1.length());
+            System.out.println(s2.length());
+            System.out.println(s3.length());
+
+            // task 3 convert to uppercase
+            String upper = convertToLowerCase( s7 );
 
 
 
 
 
+            // print tasks 3 and 4
 
 
         /*
@@ -97,6 +104,7 @@ public class Task_Strings {
         */
     }
 
+
     /**
      * Task 1: Concatenate Two Strings
      *      *
@@ -117,6 +125,8 @@ public class Task_Strings {
     }
     public static String concatenateString(String s3, String s4 , String s5, String s6, String s7){
         return s3.concat( s4 ).concat( s5 ).concat( s6 ).concat( s7 );
+
+
     }
 
     /**
@@ -151,10 +161,12 @@ public class Task_Strings {
      * - Use the `toUpperCase()` method to convert the string.
      * - Return the uppercase string.
      */
-    public static String convertToUpperCase(String str) {
+    public static String convertToUpperCase(String s7) {
         // TODO: Implement logic to convert string to uppercase.
+
         return null; // Placeholder return value
     }
+
 
     /**
      * Task 4: Convert String to Lowercase
