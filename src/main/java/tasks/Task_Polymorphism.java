@@ -46,7 +46,8 @@ package tasks;
  *   - `public class Circle implements Shape { ... }`
  *   - `public class Rectangle implements Shape { ... }`
  */
-public class Task_Polymorphism {
+public class
+Task_Polymorphism {
 
     public static void main(String[] args) {
         // TODO: Implement the instructions to demonstrate polymorphism.

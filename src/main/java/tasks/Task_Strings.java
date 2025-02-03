@@ -72,7 +72,7 @@ public class Task_Strings {
      */
     public static String concatenateStrings(String str1, String str2) {
         // TODO: Implement logic to concatenate two strings.
-        return null; // Placeholder return value
+        return str1 + str2; // Placeholder return value
     }
 
     /**
@@ -90,6 +90,8 @@ public class Task_Strings {
      */
     public static void printStringLength(String str) {
         // TODO: Implement logic to print the length of the string.
+        System.out.println(str.length());
+
     }
 
     /**
@@ -107,7 +109,7 @@ public class Task_Strings {
      */
     public static String convertToUpperCase(String str) {
         // TODO: Implement logic to convert string to uppercase.
-        return null; // Placeholder return value
+        return str.toUpperCase(); // Placeholder return value
     }
 
     /**
@@ -125,7 +127,7 @@ public class Task_Strings {
      */
     public static String convertToLowerCase(String str) {
         // TODO: Implement logic to convert string to lowercase.
-        return null; // Placeholder return value
+        return str.toLowerCase(); // Placeholder return value
     }
 
     /**
