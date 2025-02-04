@@ -25,8 +25,55 @@ package tasks;
  */
 public class Task_Strings {
 
-    public static void main(String[] args) {
+
+
+
+
+        public static void main(String[] args) {
         // TODO: Create sample strings and test each string operation method here.
+
+            String s1 = "hello ";
+            String s2 = "java";
+            String s3 = "hello ";
+            String s4 = "adeel";
+            String s5 = " my son";
+            String s6 = ".";
+            String s7 = "your so cute my baby boy";
+
+
+
+            // task one  call to concatenate strings methode
+
+            String res = concatenateStrings( s1,s2 );
+
+            //print the concatenated res
+
+            System.out.println(res);
+            //
+            String res1 = concatenateString( s3,s4,s5,s6,s7);
+
+            System.out.println(res1);
+
+
+            //task 2 print lengths of the given  strings:
+
+            System.out.println("length of the string:"+ s6.length());
+            System.out.println(s7.length());
+            System.out.println(s5.length());
+            System.out.println(s4.length());
+            System.out.println(s1.length());
+            System.out.println(s2.length());
+            System.out.println(s3.length());
+
+            // task 3 convert to uppercase
+            String upper = convertToLowerCase( s7 );
+
+
+
+
+
+            // print tasks 3 and 4
+
 
         /*
         // Example Usage:
@@ -57,22 +104,29 @@ public class Task_Strings {
         */
     }
 
+
     /**
      * Task 1: Concatenate Two Strings
+     *      *
+     *       *description:
+     *      * - Concatenate two given strings and return the resulting string.
+     *      *
+     *      * Method Signature:
+     *      * - public stat
+     *      ic String concatenateStrings(String str1, String str2)
      *
-     * Description:
-     * - Concatenate two given strings and return the resulting string.
-     *
-     * Method Signature:
-     * - public static String concatenateStrings(String str1, String str2)
-     *
-     * TODO:
-     * - Combine str1 and str2 using the `+` operator or `concat` method.
-     * - Return the concatenated string.
+     * TODO:method.
+     *      *
+     * - Combine str1 and str2 using the `+` operator or `concat`  - Return the concatenated string.
      */
-    public static String concatenateStrings(String str1, String str2) {
+    public static String concatenateStrings(String s1, String s2) {
         // TODO: Implement logic to concatenate two strings.
-        return null; // Placeholder return value
+        return  s1 + s2; // Placeholder return value
+    }
+    public static String concatenateString(String s3, String s4 , String s5, String s6, String s7){
+        return s3.concat( s4 ).concat( s5 ).concat( s6 ).concat( s7 );
+
+
     }
 
     /**
@@ -88,8 +142,10 @@ public class Task_Strings {
      * - Use the `length()` method to determine the string's length.
      * - Print the length to the console.
      */
-    public static void printStringLength(String str) {
+    public static void printStringLength(String s6) {
         // TODO: Implement logic to print the length of the string.
+
+
     }
 
     /**
@@ -105,10 +161,12 @@ public class Task_Strings {
      * - Use the `toUpperCase()` method to convert the string.
      * - Return the uppercase string.
      */
-    public static String convertToUpperCase(String str) {
+    public static String convertToUpperCase(String s7) {
         // TODO: Implement logic to convert string to uppercase.
+
         return null; // Placeholder return value
     }
+
 
     /**
      * Task 4: Convert String to Lowercase
@@ -342,6 +400,7 @@ public class Task_Strings {
      * - Return the string without duplicates.
      */
     public static String removeDuplicates(String str) {
+
         // TODO: Implement logic to remove duplicate characters from the string.
         return null; // Placeholder return value
     }
