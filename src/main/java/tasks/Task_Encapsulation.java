@@ -19,6 +19,8 @@ package tasks;
  *
  *   2. **Provide public getters and setters** for these private fields, maintaining appropriate
  *      validation and data constraints.
+ *      - Example: The setter for `accountNumber` can validate if the account format is correct.
+ *  *   - Example: The getter for `balance` can simply return the current balance.
  *
  *
  *   3. **Implement the deposit and withdraw methods**:
@@ -54,14 +56,18 @@ package tasks;
  * No solution is provided here; you must implement the logic as an exercise.
  */
 public class Task_Encapsulation {
-    public  class BankAcount {
+    public static class BankAcount{
 
         // instance variable
 
          private String accountNumber;
          private double balance;
 
-         // create constructor parameterized
+        public BankAcount() {
+
+        }
+
+        // create constructor parameterized
 
         @Override
         public String toString() {
@@ -75,9 +81,6 @@ public class Task_Encapsulation {
             this.accountNumber=accountNumber;
             this.balance=balance;
 
-            //to string methode
-
-
 
         }
 
@@ -88,6 +91,9 @@ public class Task_Encapsulation {
             return accountNumber;
         }
 
+        public double getBalance() {
+            return balance;
+        }
         //setter
 
 
@@ -95,12 +101,54 @@ public class Task_Encapsulation {
             this.accountNumber = accountNumber;
         }
 
-        //
+        public void setBalance(double balance) {
+            this.balance = balance;
+        }
+
+        //deposite methode
+        public void deposite(double amount){
+            if (amount>0){
+                balance = amount+balance;//increased the amount here
+            }
+        }
+
+        // withdrow methode
+        public void withdraw(double amount){
+            if (amount<=0){
+                balance = amount - balance;
+            } else {
+                System.out.println("declined");
+            }
+        }
 
     }
 
     public static void main(String[] args) {
+        BankAcount myAccount = new BankAcount();
+        //BankAcount myAccount2 = new BankAcount();
+        System.out.println(myAccount);
+        // System.out.println(myAccount2);
+        //Testing valid deposit
+        myAccount.deposite( 3000 );
+        System.out.println("new balance:"+ myAccount.getBalance());
+        //Testing valid withdrawal
+        myAccount.withdraw( 400 );
+        System.out.println("remaining balance:"+myAccount.getBalance());
+        //testing depositing 0
+        myAccount.deposite( 0 );
+        System.out.println("balance:"+myAccount.getBalance());
+        //testing negative amount
+        myAccount.deposite( -800 );
+        System.out.println("remain balance:"+myAccount.getBalance());
+        //testing more than current balance
+        myAccount.withdraw( 4000 );
+        System.out.println("balance:"+ myAccount.getBalance());
+
+
         // TODO: Create and test your BankAccount class here or in a separate file.
+
+
+
 
         // Example (pseudo-code):
         /*
