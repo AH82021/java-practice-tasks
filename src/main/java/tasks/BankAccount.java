@@ -22,7 +22,7 @@ public class BankAccount {
     public void setBalance(){
         this.balance=balance;
     }
-    public String getAccountNumber(){
+    public String getAccountNumber(String number){
         return accountNumber;
     }
     public double getBalance() {

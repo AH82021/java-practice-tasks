@@ -199,7 +199,7 @@ class LibraryItem {
 /**
  * Derived Class: Book
  */
-class Book extends LibraryItem {
+class Book {
     private String author;
     private int numPages;
 
@@ -212,7 +212,7 @@ class Book extends LibraryItem {
      * @param numPages The number of pages in the book
      */
     public Book(String title, String itemId, String author, int numPages) {
-        super(title, itemId);
+        super();
         this.author = author;
         this.numPages = numPages;
     }
@@ -241,7 +241,7 @@ class Book extends LibraryItem {
 /**
  * Derived Class: DVD
  */
-class DVD extends LibraryItem {
+class DVD {
     private String director;
     private int duration; // duration in minutes
 
@@ -254,7 +254,7 @@ class DVD extends LibraryItem {
      * @param duration The duration of the DVD in minutes
      */
     public DVD(String title, String itemId, String director, int duration) {
-        super(title, itemId);
+        super();
         this.director = director;
         this.duration = duration;
     }
@@ -283,7 +283,7 @@ class DVD extends LibraryItem {
 /**
  * Derived Class: Magazine
  */
-class Magazine extends LibraryItem {
+class Magazine {
     private int issueNumber;
     private String publicationMonth;
 
@@ -296,7 +296,7 @@ class Magazine extends LibraryItem {
      * @param publicationMonth The publication month of the magazine
      */
     public Magazine(String title, String itemId, int issueNumber, String publicationMonth) {
-        super(title, itemId);
+        super();
         this.issueNumber = issueNumber;
         this.publicationMonth = publicationMonth;
     }

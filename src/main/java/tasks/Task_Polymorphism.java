@@ -1,7 +1,6 @@
 package tasks;
 
 
-
 /**
  * Task: Polymorphism (Practical Example)
  *
@@ -47,11 +46,18 @@ package tasks;
  *   - `public class Rectangle implements Shape { ... }`
  */
 public class Task_Polymorphism {
+    interface shape {
+        void  drow();
+        double area();
+    }
+    public static class shap {
+
+    }
 
     public static void main(String[] args) {
         // TODO: Implement the instructions to demonstrate polymorphism.
 
-        // Example (pseudo-code):
+        // Example (pseudo-code):add
         /*
         Shape[] shapes = new Shape[2];
         shapes[0] = new Circle(5.0);     // radius = 5.0

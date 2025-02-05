@@ -58,6 +58,9 @@ public class Task_Encapsulation {
 
     public static void main(String[] args) {
         // TODO: Create and test your BankAccount class here or in a separate file.
+        BankAccount ahmad=new BankAccount();
+        ahmad.getAccountNumber("20020202020");
+        System.out.println(ahmad);
 
         // Example (pseudo-code):
         /*
