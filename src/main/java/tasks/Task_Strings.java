@@ -28,7 +28,7 @@ public class Task_Strings {
     public static void main(String[] args) {
         // TODO: Create sample strings and test each string operation method here.
 
-        /*
+
         // Example Usage:
         String sample1 = "Hello World";
         String sample2 = "Java Programming";
@@ -40,6 +40,7 @@ public class Task_Strings {
         printStringLength(sample1);
         String upper = convertToUpperCase(sample2);
         String lower = convertToLowerCase(sample1);
+          /*
         String replaced = replaceSubstring(sample2, "Programming", "AI");
         boolean isPal = isPalindrome(sample3);
         String reversed = reverseString(sample1);
@@ -72,7 +73,7 @@ public class Task_Strings {
      */
     public static String concatenateStrings(String str1, String str2) {
         // TODO: Implement logic to concatenate two strings.
-        return null; // Placeholder return value
+        return str1 + str2; // Placeholder return value
     }
 
     /**
@@ -90,6 +91,7 @@ public class Task_Strings {
      */
     public static void printStringLength(String str) {
         // TODO: Implement logic to print the length of the string.
+        System.out.println(str.length());
     }
 
     /**
@@ -107,7 +109,7 @@ public class Task_Strings {
      */
     public static String convertToUpperCase(String str) {
         // TODO: Implement logic to convert string to uppercase.
-        return null; // Placeholder return value
+        return str.toUpperCase(); // Placeholder return value
     }
 
     /**
@@ -125,7 +127,7 @@ public class Task_Strings {
      */
     public static String convertToLowerCase(String str) {
         // TODO: Implement logic to convert string to lowercase.
-        return null; // Placeholder return value
+        return str.toUpperCase(); // Placeholder return value
     }
 
     /**
@@ -143,7 +145,7 @@ public class Task_Strings {
      */
     public static String replaceSubstring(String str, String target, String replacement) {
         // TODO: Implement logic to replace a substring within the string.
-        return null; // Placeholder return value
+        return str.replace(target,replacement); // Placeholder return value
     }
 
     /**
