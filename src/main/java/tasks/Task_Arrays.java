@@ -65,6 +65,8 @@ public class Task_Arrays {
      */
     public static void initializeArray(int[] array, int value) {
         // TODO: Implement logic to initialize the array with the given value.
+        array = new int[value];
+
     }
 
     /**
