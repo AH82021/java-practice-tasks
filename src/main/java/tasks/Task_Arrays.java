@@ -1,6 +1,10 @@
 package tasks;
 
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Task: Basic Array Operations
  *
@@ -27,6 +31,37 @@ public class Task_Arrays {
     public static void main(String[] args) {
         // TODO: Create sample arrays and test each array operation method here.
 
+        int[] sampleArray = {5, 3, 8, 4, 2,2};
+        System.out.println("2-Print Array Elements");
+        printArray(sampleArray);
+
+        System.out.println("3-Find Maximum Element");
+        System.out.println(findMax(sampleArray));
+
+        System.out.println("4-Find Minimum Element");
+        System.out.println(findMin(sampleArray));
+
+        System.out.println("5-Calculate Sum of Elements");
+        System.out.println(calculateSum(sampleArray));
+
+        System.out.println("6-Calculate Average of Elements");
+        System.out.println(calculateAverage(sampleArray));
+
+
+        System.out.println("7-Reverse the Array");
+        reverseArray(sampleArray);
+        printArray(sampleArray);
+
+        System.out.println("8-Sort the Array");
+        sortArray(sampleArray);
+        printArray(sampleArray);
+
+        System.out.println("9-Search for an Element");
+        System.out.println(searchElement(sampleArray,7));
+
+        System.out.println("10-Remove Duplicates from Array");
+        System.out.println(removeDuplicates(sampleArray));
+        printArray(sampleArray);
         /*
         // Example Usage:
         int[] sampleArray = {5, 3, 8, 4, 2};
@@ -65,6 +100,11 @@ public class Task_Arrays {
      */
     public static void initializeArray(int[] array, int value) {
         // TODO: Implement logic to initialize the array with the given value.
+         array[0] = 2;
+         array[1] = 5;
+         array[2] = 8;
+         array[3] = 6;
+         array[4] = 3;
     }
 
     /**
@@ -81,6 +121,9 @@ public class Task_Arrays {
      */
     public static void printArray(int[] array) {
         // TODO: Implement logic to print array elements.
+        for(int i=0; i<array.length; i++){
+            System.out.println(array[i]);
+        }
     }
 
     /**
@@ -97,7 +140,13 @@ public class Task_Arrays {
      */
     public static int findMax(int[] array) {
         // TODO: Implement logic to find the maximum element.
-        return 0; // Placeholder return value
+        int max = array[0];
+        for(int i = 0; i<array.length; i++){
+            if(array[i] > max){
+                max = array[i];
+            }
+        }
+        return max; // Placeholder return value
     }
 
     /**
@@ -114,7 +163,13 @@ public class Task_Arrays {
      */
     public static int findMin(int[] array) {
         // TODO: Implement logic to find the minimum element.
-        return 0; // Placeholder return value
+        int min = array[0];
+        for(int i = 0; i<array.length; i++){
+            if(array[i] < min){
+                min = array[i];
+            }
+        }
+        return min; // Placeholder return value
     }
 
     /**
@@ -131,7 +186,11 @@ public class Task_Arrays {
      */
     public static double calculateSum(int[] array) {
         // TODO: Implement logic to calculate the sum of array elements.
-        return 0.0; // Placeholder return value
+        double sum = 0.0;
+        for(int i=0; i<array.length; i++){
+            sum += array[i];
+        }
+        return sum; // Placeholder return value
     }
 
     /**
@@ -148,7 +207,13 @@ public class Task_Arrays {
      */
     public static double calculateAverage(int[] array) {
         // TODO: Implement logic to calculate the average of array elements.
-        return 0.0; // Placeholder return value
+        double avarage = 0.0;
+        double sum = 0.0;
+        for(int i =0; i<array.length; i++){
+            sum += array[i];
+        }
+        avarage = sum/array.length;
+        return avarage; // Placeholder return value
     }
 
     /**
@@ -165,6 +230,11 @@ public class Task_Arrays {
      */
     public static void reverseArray(int[] array) {
         // TODO: Implement logic to reverse the array.
+        for(int i = 0; i<array.length/2; i++){
+            int temp = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = temp;
+        }
     }
 
     /**
@@ -181,6 +251,17 @@ public class Task_Arrays {
      */
     public static void sortArray(int[] array) {
         // TODO: Implement logic to sort the array in ascending order.
+
+        for(int i = 0; i<array.length; i++){
+            int temp = 0;
+            for(int j=i+1; j< array.length; j++){
+                if(array[j] < array[i]){
+                    temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
     }
 
     /**
@@ -197,6 +278,11 @@ public class Task_Arrays {
      */
     public static boolean searchElement(int[] array, int target) {
         // TODO: Implement logic to search for the target element.
+        for(int i = 0; i<array.length; i++){
+            if(target == array[i]){
+                return true;
+            }
+        }
         return false; // Placeholder return value
     }
 
@@ -214,7 +300,16 @@ public class Task_Arrays {
      */
     public static int[] removeDuplicates(int[] array) {
         // TODO: Implement logic to remove duplicate elements.
-        return new int[0]; // Placeholder return value
+        Set<Integer> set = new HashSet<>();
+        for(int i = 0; i< array.length; i++){
+            set.add(array[i]);
+        }
+        int[] newArray = Arrays.stream(array).distinct().toArray();
+        for(int j = 0; j<newArray.length; j++){
+            System.out.println(newArray[j]);
+        }
+        return newArray;
+       // return new int[0]; // Placeholder return value
     }
 
     /**
