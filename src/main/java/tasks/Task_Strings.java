@@ -26,68 +26,46 @@ package tasks;
 public class Task_Strings {
 
 
-
-
-
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         // TODO: Create sample strings and test each string operation method here.
 
-            String s1 = "hello ";
-            String s2 = "java";
-            String s3 = "hello ";
-            String s4 = "adeel";
-            String s5 = " my son";
-            String s6 = ".";
-            String s7 = "your so cute my baby boy";
+
+        // task one  call to concatenate strings methode
+
+        //String res = concatenateStrings( s1,s2 );
+
+        //print the concatenated res
+
+        //System.out.println(res);
+        //
+        //String res1 = concatenateString( s3,s4,s5,s6,s7);
+
+        //System.out.println(res1);
+
+
+        //task 2 print lengths of the given  strings:
+
+
+        // print tasks 3 and 4
 
 
 
-            // task one  call to concatenate strings methode
-
-            String res = concatenateStrings( s1,s2 );
-
-            //print the concatenated res
-
-            System.out.println(res);
-            //
-            String res1 = concatenateString( s3,s4,s5,s6,s7);
-
-            System.out.println(res1);
-
-
-            //task 2 print lengths of the given  strings:
-
-            System.out.println("length of the string:"+ s6.length());
-            System.out.println(s7.length());
-            System.out.println(s5.length());
-            System.out.println(s4.length());
-            System.out.println(s1.length());
-            System.out.println(s2.length());
-            System.out.println(s3.length());
-
-            // task 3 convert to uppercase
-            String upper = convertToLowerCase( s7 );
-
-
-
-
-
-            // print tasks 3 and 4
-
-
-        /*
         // Example Usage:
         String sample1 = "Hello World";
         String sample2 = "Java Programming";
         String sample3 = "madam";
         String sample4 = "OpenAI ChatGPT";
-        String sample5 = "  Trim this string  ";
+        String sample5 = "Trim this string  ";
 
-        String concatenated = concatenateStrings(sample1, sample2);
-        printStringLength(sample1);
+        String concatenated = concatenateStrings(sample1,sample2);
+        printStringLength(concatenated);
         String upper = convertToUpperCase(sample2);
+        System.out.println(upper);
         String lower = convertToLowerCase(sample1);
+        System.out.println(lower);
         String replaced = replaceSubstring(sample2, "Programming", "AI");
+        System.out.println(replaced);
+        /*
         boolean isPal = isPalindrome(sample3);
         String reversed = reverseString(sample1);
         int vowelCount = countVowels(sample1);
@@ -107,27 +85,26 @@ public class Task_Strings {
 
     /**
      * Task 1: Concatenate Two Strings
-     *      *
-     *       *description:
-     *      * - Concatenate two given strings and return the resulting string.
-     *      *
-     *      * Method Signature:
-     *      * - public stat
-     *      ic String concatenateStrings(String str1, String str2)
-     *
+     * *
+     * *description:
+     * * - Concatenate two given strings and return the resulting string.
+     * *
+     * * Method Signature:
+     * * - public stat
+     * ic String concatenateStrings(String str1, String str2)
+     * <p>
      * TODO:method.
-     *      *
+     * *
      * - Combine str1 and str2 using the `+` operator or `concat`  - Return the concatenated string.
      */
-    public static String concatenateStrings(String s1, String s2) {
+    public static String concatenateStrings(String str1, String str2) {
         // TODO: Implement logic to concatenate two strings.
-        return  s1 + s2; // Placeholder return value
+        return  str1+str2;
     }
-    public static String concatenateString(String s3, String s4 , String s5, String s6, String s7){
-        return s3.concat( s4 ).concat( s5 ).concat( s6 ).concat( s7 );
 
 
-    }
+
+
 
     /**
      * Task 2: Print Length of a String
@@ -142,8 +119,10 @@ public class Task_Strings {
      * - Use the `length()` method to determine the string's length.
      * - Print the length to the console.
      */
-    public static void printStringLength(String s6) {
+
+    public static void printStringLength(String str) {
         // TODO: Implement logic to print the length of the string.
+        str.length();
 
 
     }
@@ -161,10 +140,10 @@ public class Task_Strings {
      * - Use the `toUpperCase()` method to convert the string.
      * - Return the uppercase string.
      */
-    public static String convertToUpperCase(String s7) {
+    public static String convertToUpperCase(String str1) {
         // TODO: Implement logic to convert string to uppercase.
 
-        return null; // Placeholder return value
+        return str1.toUpperCase(); // Placeholder return value
     }
 
 
@@ -183,7 +162,7 @@ public class Task_Strings {
      */
     public static String convertToLowerCase(String str) {
         // TODO: Implement logic to convert string to lowercase.
-        return null; // Placeholder return value
+        return str.toLowerCase();// Placeholder return value
     }
 
     /**
@@ -201,7 +180,7 @@ public class Task_Strings {
      */
     public static String replaceSubstring(String str, String target, String replacement) {
         // TODO: Implement logic to replace a substring within the string.
-        return null; // Placeholder return value
+        return str.replace( 'n','b' );// Placeholder return value
     }
 
     /**
