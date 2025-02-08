@@ -28,6 +28,11 @@ public class Task_Strings {
     public static void main(String[] args) {
         // TODO: Create sample strings and test each string operation method here.
 
+        String sample1 = "Hello World";
+        String reversed = reverseString(sample1);
+        System.out.println(reversed);
+        System.out.println(countVowels("Jeena"));
+
         /*
         // Example Usage:
         String sample1 = "Hello World";
@@ -163,7 +168,7 @@ public class Task_Strings {
      */
     public static boolean isPalindrome(String str) {
         // TODO: Implement logic to check if the string is a palindrome.
-        return false; // Placeholder return value
+        return  false; // Placeholder return value
     }
 
     /**
@@ -181,7 +186,18 @@ public class Task_Strings {
      */
     public static String reverseString(String str) {
         // TODO: Implement logic to reverse the string.
-        return null; // Placeholder return value
+
+
+//"Jeena" ""+a+n+e+e+J
+        String reverse = "";
+
+        for (int i = str.length()-1; i >=0 ; i--) {
+
+            char c = str.charAt(i);
+
+            reverse += c;
+        }
+        return reverse; // Placeholder return value
     }
 
     /**
@@ -197,9 +213,21 @@ public class Task_Strings {
      * - Iterate through the string and count vowels.
      * - Return the total count.
      */
+    //Jeena => // loop , if c
     public static int countVowels(String str) {
+
+        str = str.toLowerCase();
+        int count =0;
+        for (int i = 0; i< str.length();i++){            char c = str.charAt(i);
+            System.out.println(c);
+            if(c=='a' || c=='i' || c=='e' || c=='o' || c=='u'){
+                count++;
+            }
+
+
+        }
         // TODO: Implement logic to count vowels in the string.
-        return 0; // Placeholder return value
+        return count; // Placeholder return*45*\9-value
     }
 
     /**
@@ -290,7 +318,9 @@ public class Task_Strings {
      */
     public static boolean compareStrings(String str1, String str2) {
         // TODO: Implement logic to compare two strings for equality (case-sensitive).
-        return false; // Placeholder return value
+
+        // Placeholder return value
+        return str1.equals(str2);
     }
 
     /**
@@ -308,7 +338,7 @@ public class Task_Strings {
      */
     public static boolean containsSubstring(String str, String substring) {
         // TODO: Implement logic to check if the string contains the substring.
-        return false; // Placeholder return value
+        return str.contains(substring); // Placeholder return value
     }
 
     /**
@@ -326,7 +356,7 @@ public class Task_Strings {
      */
     public static char[] convertToCharArray(String str) {
         // TODO: Implement logic to convert the string to a character array.
-        return new char[0]; // Placeholder return value
+        return str.toCharArray(); // Placeholder return value
     }
 
     /**
