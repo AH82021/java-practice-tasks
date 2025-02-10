@@ -1,6 +1,11 @@
 package tasks;
 
 
+import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.PathIterator;
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
 
 /**
  * Task: Polymorphism (Practical Example)
@@ -47,6 +52,11 @@ package tasks;
  *   - `public class Rectangle implements Shape { ... }`
  */
 public class Task_Polymorphism {
+
+
+
+
+
 
     public static void main(String[] args) {
         // TODO: Implement the instructions to demonstrate polymorphism.
