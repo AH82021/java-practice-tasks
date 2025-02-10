@@ -264,7 +264,7 @@ public class Task_Strings {
      */
     public static String extractSubstring(String str, int start, int end) {
         // TODO: Implement logic to extract a substring from the string.
-        return null; // Placeholder return value
+        return str.substring(start,end); // Placeholder return value
     }
 
     /**
@@ -282,7 +282,7 @@ public class Task_Strings {
      */
     public static String[] splitString(String str, String delimiter) {
         // TODO: Implement logic to split the string by the given delimiter.
-        return new String[0]; // Placeholder return value
+        return str.split(delimiter); // Placeholder return value
     }
 
     /**
@@ -300,7 +300,7 @@ public class Task_Strings {
      */
     public static String trimWhitespace(String str) {
         // TODO: Implement logic to trim whitespace from the string.
-        return null; // Placeholder return value
+        return str.trim(); // Placeholder return value
     }
 
     /**
