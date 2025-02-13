@@ -69,13 +69,14 @@ public class Task_Strings {
 
 
 
-        //boolean isPal = isPalindrome(sample3);
-
+        boolean isPal = isPalindrome(sample3);
+        System.out.println(isPal);
         String reversed = reverseString(sample1);
+        System.out.println(reversed);
         System.out.println(reversed);
         int vowelCount = countVowels(sample1);
         System.out.println(vowelCount);
-        //int index = findIndexOfChar(sample1, 'W');
+        int index = findIndexOfChar(sample1, 'W');
         /*
         String substring = extractSubstring(sample2, 5, 16);
         String[] split = splitString(sample1, " ");
@@ -208,8 +209,13 @@ public class Task_Strings {
      */
     public static boolean isPalindrome(String str) {
         // TODO: Implement logic to check if the string is a palindrome.
+        //reverse string
+        String reversedStr = new StringBuilder(str).reverse().toString();
+        //compair to the origional string with the reveres string
+        return str.equals( reversedStr );
 
-        return false;
+
+
     }
 
         /**
@@ -251,9 +257,19 @@ public class Task_Strings {
          */
         public static int countVowels (String str1){
             // TODO: Implement logic to count vowels in the string.
+            int count=0;
+            for (count=0;count>str1.length();count++){
+                char c =str1.charAt( count );
+                System.out.println(c);
+                if (c == 'a' || c == 'i' || c == 'e' || c == 'o' || c == 'u') { // Check if the character is a vowel
+                    count++; // Increment the vowel count
+                }
+                return count;
 
-            int vowels = 5;
-            return vowels; // Placeholder return value
+            }
+
+
+            return 0; // Placeholder return value
         }
 
         /**
@@ -346,7 +362,7 @@ public class Task_Strings {
          */
         public static boolean compareStrings (String str1, String str2){
             // TODO: Implement logic to compare two strings for equality (case-sensitive).
-            return false; // Placeholder return value
+            return str1.equals( str2 ); // Placeholder return value
         }
 
         /**
@@ -364,7 +380,7 @@ public class Task_Strings {
          */
         public static boolean containsSubstring (String str1, String substring){
             // TODO: Implement logic to check if the string contains the substring.
-            return false; // Placeholder return value
+            return str1.contains( substring ); // Placeholder return value
         }
 
         /**
@@ -382,7 +398,8 @@ public class Task_Strings {
          */
         public static char[] convertToCharArray (String str1){
             // TODO: Implement logic to convert the string to a character array.
-            return new char[0]; // Placeholder return value
+            // return new char[0];
+            return str1.toCharArray();// Placeholder return value
         }
 
         /**

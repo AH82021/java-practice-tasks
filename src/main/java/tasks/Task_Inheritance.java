@@ -1,6 +1,8 @@
 package tasks;
 
 
+import org.w3c.dom.ls.LSOutput;
+
 /**
  * Task: Inheritance (Practical Example)
  *
@@ -102,20 +104,88 @@ package tasks;
  * No solution is provided here; you must implement the logic as an exercise.
  */
 public class Task_Inheritance {
+    //base class
+
 
     public static void main(String[] args) {
         // TODO: Create and test your LibraryItem classes here.
 
-        // Example (pseudo-code):
+        class LibraryItem {
+            //instance
+            private String title;
+            private String itemId;
+            //constructor
 
-        /*
-        // Create a Book instance
+            public LibraryItem(String title, String itemId) {
+                this.title = title;
+                this.itemId = itemId;
+
+            }
+
+
+            LibraryItem() {
+
+            }
+
+            // geter
+            public String getTitle() {
+                return title;
+            }
+
+            public String getItemId() {
+                return itemId;
+            }
+
+            public void checkout() {
+                return;
+            }
+
+            public void returnItem() {
+                return;
+            }
+
+            //subclass BOOK
+            class Book extends LibraryItem {
+                private String author;
+                private int numPages;
+
+                public Book(String title, String itemId, String author, int numPages) {
+                    super( title, itemId );//here we inherit title and itemId from super class
+                }
+
+                //getter
+                public String getAuthor() {
+                    return author;
+                }
+
+                public int getNumPages() {
+                    return numPages;
+
+                }
+
+
+            }
+
+
+            }
+
+
+
+            // Example (pseudo-code):
+
+
+
+ // Create a Book instance
         Book book = new Book("Effective Java", "B001", "Joshua Bloch", 416);
         System.out.println("Book Title: " + book.getTitle());
         System.out.println("Author: " + book.getAuthor());
-        book.checkout();
-        book.returnItem();
+       // book.checkout();
+       // book.returnItem();
 
+
+
+
+/*
         // Create a DVD instance
         DVD dvd = new DVD("Inception", "D001", "Christopher Nolan", 148);
         System.out.println("\nDVD Title: " + dvd.getTitle());
@@ -129,195 +199,199 @@ public class Task_Inheritance {
         System.out.println("Issue Number: " + magazine.getIssueNumber());
         magazine.checkout();
         magazine.returnItem();
-        */
-    }
-}
 
-/**
- * Base Class: LibraryItem
- */
-class LibraryItem {
-    private String title;
-    private String itemId;
-    private boolean isCheckedOut;
 
-    /**
-     * Constructor for LibraryItem
-     *
-     * @param title  The title of the library item
-     * @param itemId The unique identifier for the library item
-     */
-    public LibraryItem(String title, String itemId) {
-        this.title = title;
-        this.itemId = itemId;
-        this.isCheckedOut = false;
-    }
 
-    /**
-     * Get the title of the library item
-     *
-     * @return The title
-     */
-    public String getTitle() {
-        return title;
-    }
-
-    /**
-     * Get the item ID of the library item
-     *
-     * @return The item ID
-     */
-    public String getItemId() {
-        return itemId;
-    }
-
-    /**
-     * Check out the library item
-     */
-    public void checkout() {
-        if (!isCheckedOut) {
-            isCheckedOut = true;
-            System.out.println(title + " has been checked out.");
-        } else {
-            System.out.println(title + " is already checked out.");
+         */
         }
     }
 
     /**
-     * Return the library item
+     * Base Class: LibraryItem
      */
-    public void returnItem() {
-        if (isCheckedOut) {
-            isCheckedOut = false;
-            System.out.println(title + " has been returned.");
-        } else {
-            System.out.println(title + " was not checked out.");
+    class LibraryItem {
+        String title;
+        int itemId;
+        boolean isCheckedOut;
+
+        /**
+         * Constructor for LibraryItem
+         *
+         * @param title  The title of the library item
+         * @param itemId The unique identifier for the library item
+         */
+        public LibraryItem(String title, String itemId) {
+            this.title = title;
+            this.itemId = Integer.parseInt( itemId );
+            this.isCheckedOut = false;
+        }
+
+        /**
+         * Get the title of the library item
+         *
+         * @return The title
+         */
+        public String getTitle() {
+            return title;
+        }
+
+        /**
+         * Get the item ID of the library item
+         *
+         * @return The item ID
+         */
+        public int getItemId() {
+            return itemId;
+        }
+
+        /**
+         * Check out the library item
+         */
+        public void checkout() {
+            if (!isCheckedOut) {
+                isCheckedOut = true;
+                System.out.println( title + " has been checked out." );
+            } else {
+                System.out.println( title + " is already checked out." );
+            }
+        }
+
+        /**
+         * Return the library item
+         */
+        public void returnItem() {
+            if (isCheckedOut) {
+                isCheckedOut = false;
+                System.out.println( title + " has been returned." );
+            } else {
+                System.out.println( title + " was not checked out." );
+            }
         }
     }
-}
-
-/**
- * Derived Class: Book
- */
-class Book extends LibraryItem {
-    private String author;
-    private int numPages;
 
     /**
-     * Constructor for Book
-     *
-     * @param title    The title of the book
-     * @param itemId   The unique identifier for the book
-     * @param author   The author of the book
-     * @param numPages The number of pages in the book
+     * Derived Class: Book
      */
-    public Book(String title, String itemId, String author, int numPages) {
-        super(title, itemId);
-        this.author = author;
-        this.numPages = numPages;
+    class Book extends LibraryItem {
+        private String author;
+        private int numPages;
+
+        /**
+         * Constructor for Book
+         *
+         * @param title    The title of the book
+         * @param itemId   The unique identifier for the book
+         * @param author   The author of the book
+         * @param numPages The number of pages in the book
+         */
+        public Book(String title, String itemId, String author, int numPages) {
+            super( title, itemId );
+            this.author = author;
+            this.numPages = numPages;
+        }
+
+        /**
+         * Get the author of the book
+         *
+         * @return The author
+         */
+        public String getAuthor() {
+            return author;
+        }
+
+        /**
+         * Get the number of pages in the book
+         *
+         * @return The number of pages
+         */
+        public int getNumPages() {
+            return numPages;
+        }
+
+        // Optionally override checkout and returnItem if needed
     }
 
     /**
-     * Get the author of the book
-     *
-     * @return The author
+     * Derived Class: DVD
      */
-    public String getAuthor() {
-        return author;
+    class DVD extends LibraryItem {
+        private String director;
+        private int duration; // duration in minutes
+
+        /**
+         * Constructor for DVD
+         *
+         * @param title    The title of the DVD
+         * @param itemId   The unique identifier for the DVD
+         * @param director The director of the DVD
+         * @param duration The duration of the DVD in minutes
+         */
+        public DVD(String title, String itemId, String director, int duration) {
+            super( title, itemId );
+            this.director = director;
+            this.duration = duration;
+        }
+
+        /**
+         * Get the director of the DVD
+         *
+         * @return The director
+         */
+        public String getDirector() {
+            return director;
+        }
+
+        /**
+         * Get the duration of the DVD
+         *
+         * @return The duration in minutes
+         */
+        public int getDuration() {
+            return duration;
+        }
+
+        // Optionally override checkout and returnItem if needed
     }
 
     /**
-     * Get the number of pages in the book
-     *
-     * @return The number of pages
+     * Derived Class: Magazine
      */
-    public int getNumPages() {
-        return numPages;
+    class Magazine extends LibraryItem {
+        private int issueNumber;
+        private String publicationMonth;
+
+        /**
+         * Constructor for Magazine
+         *
+         * @param title            The title of the magazine
+         * @param itemId           The unique identifier for the magazine
+         * @param issueNumber      The issue number of the magazine
+         * @param publicationMonth The publication month of the magazine
+         */
+        public Magazine(String title, String itemId, int issueNumber, String publicationMonth) {
+            super( title, itemId );
+            this.issueNumber = issueNumber;
+            this.publicationMonth = publicationMonth;
+        }
+
+        /**
+         * Get the issue number of the magazine
+         *
+         * @return The issue number
+         */
+        public int getIssueNumber() {
+            return issueNumber;
+        }
+
+        /**
+         * Get the publication month of the magazine
+         *
+         * @return The publication month
+         */
+        public String getPublicationMonth() {
+            return publicationMonth;
+        }
+
+        // Optionally override checkout and returnItem if needed
     }
 
-    // Optionally override checkout and returnItem if needed
-}
-
-/**
- * Derived Class: DVD
- */
-class DVD extends LibraryItem {
-    private String director;
-    private int duration; // duration in minutes
-
-    /**
-     * Constructor for DVD
-     *
-     * @param title    The title of the DVD
-     * @param itemId   The unique identifier for the DVD
-     * @param director The director of the DVD
-     * @param duration The duration of the DVD in minutes
-     */
-    public DVD(String title, String itemId, String director, int duration) {
-        super(title, itemId);
-        this.director = director;
-        this.duration = duration;
-    }
-
-    /**
-     * Get the director of the DVD
-     *
-     * @return The director
-     */
-    public String getDirector() {
-        return director;
-    }
-
-    /**
-     * Get the duration of the DVD
-     *
-     * @return The duration in minutes
-     */
-    public int getDuration() {
-        return duration;
-    }
-
-    // Optionally override checkout and returnItem if needed
-}
-
-/**
- * Derived Class: Magazine
- */
-class Magazine extends LibraryItem {
-    private int issueNumber;
-    private String publicationMonth;
-
-    /**
-     * Constructor for Magazine
-     *
-     * @param title            The title of the magazine
-     * @param itemId           The unique identifier for the magazine
-     * @param issueNumber      The issue number of the magazine
-     * @param publicationMonth The publication month of the magazine
-     */
-    public Magazine(String title, String itemId, int issueNumber, String publicationMonth) {
-        super(title, itemId);
-        this.issueNumber = issueNumber;
-        this.publicationMonth = publicationMonth;
-    }
-
-    /**
-     * Get the issue number of the magazine
-     *
-     * @return The issue number
-     */
-    public int getIssueNumber() {
-        return issueNumber;
-    }
-
-    /**
-     * Get the publication month of the magazine
-     *
-     * @return The publication month
-     */
-    public String getPublicationMonth() {
-        return publicationMonth;
-    }
-
-    // Optionally override checkout and returnItem if needed
-}
