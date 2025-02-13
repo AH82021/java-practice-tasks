@@ -54,18 +54,37 @@ package tasks;
  *
  * No solution is provided here; you must implement the logic as an exercise.
  */
-public class Task_Encapsulation {
+package file;
+public class Bankaccount{
+    private String accountnumber;
+    private dobule balance;
+    public String getAccountNumber(){
+        returan;{
+    public void setAccountNumber(String accountNumber)  Bankaccoun {
+        this .accountnumber =accountnumber;}
+       public double getBalance(){
+           returan;{
+        public void setBalance(double Balance){
+            this .Balance = Balance;}
+           public void deposit(double amount){
+                double amount = ++4;
+           public void withdraw(double amount){
+               double amount decrease = --2;
+            public static void main(String[] args){
+                Bankaccount Bankaaccount1 = new Bankaccount();
+                String accountnumber ="5760075";
+                dobule balance = '100.2';
+                public void setAccountNumber(String accountNumber);{
+                public void setBalance(double Balance){
+                System.out.println("AccountNumber:"+AccountNumber)}
+                System.out.printl("Balance:"+Balance)}
+                 public void deposit(double amount){     
+                public void withdraw(double amount){
+               
+            
+            
+    
 
-    public static void main(String[] args) {
-        // TODO: Create and test your BankAccount class here or in a separate file.
 
-        // Example (pseudo-code):
-        /*
-        BankAccount account = new BankAccount();
-        account.setAccountNumber("1234567890");
-        account.deposit(500);
-        account.withdraw(200);
-        System.out.println("Balance: " + account.getBalance());
-        */
     }
 }
