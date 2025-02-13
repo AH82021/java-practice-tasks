@@ -80,11 +80,8 @@ public class Bankaccount{
                 System.out.printl("Balance:"+Balance)}
                  public void deposit(double amount){     
                 public void withdraw(double amount){
+                }
+                 }
+       }
+        }
                
-            
-            
-    
-
-
-    }
-}
