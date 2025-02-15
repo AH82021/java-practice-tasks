@@ -1,6 +1,8 @@
 package tasks;
 
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 /**
  * Task: Basic String Operations
@@ -33,6 +35,8 @@ public class Task_Strings {
         System.out.println(reversed);
         System.out.println(countVowels("Jeena"));
 
+        System.out.println(areAnagrams("Ajmal ","majal"));
+
         /*
         // Example Usage:
         String sample1 = "Hello World";
@@ -64,13 +68,13 @@ public class Task_Strings {
 
     /**
      * Task 1: Concatenate Two Strings
-     *
+     * <p>
      * Description:
      * - Concatenate two given strings and return the resulting string.
-     *
+     * <p>
      * Method Signature:
      * - public static String concatenateStrings(String str1, String str2)
-     *
+     * <p>
      * TODO:
      * - Combine str1 and str2 using the `+` operator or `concat` method.
      * - Return the concatenated string.
@@ -82,13 +86,13 @@ public class Task_Strings {
 
     /**
      * Task 2: Print Length of a String
-     *
+     * <p>
      * Description:
      * - Print the length of the given string.
-     *
+     * <p>
      * Method Signature:
      * - public static void printStringLength(String str)
-     *
+     * <p>
      * TODO:
      * - Use the `length()` method to determine the string's length.
      * - Print the length to the console.
@@ -101,13 +105,13 @@ public class Task_Strings {
 
     /**
      * Task 3: Convert String to Uppercase
-     *
+     * <p>
      * Description:
      * - Convert the given string to uppercase letters.
-     *
+     * <p>
      * Method Signature:
      * - public static String convertToUpperCase(String str)
-     *
+     * <p>
      * TODO:
      * - Use the `toUpperCase()` method to convert the string.
      * - Return the uppercase string.
@@ -119,13 +123,13 @@ public class Task_Strings {
 
     /**
      * Task 4: Convert String to Lowercase
-     *
+     * <p>
      * Description:
      * - Convert the given string to lowercase letters.
-     *
+     * <p>
      * Method Signature:
      * - public static String convertToLowerCase(String str)
-     *
+     * <p>
      * TODO:
      * - Use the `toLowerCase()` method to convert the string.
      * - Return the lowercase string.
@@ -137,13 +141,13 @@ public class Task_Strings {
 
     /**
      * Task 5: Replace a Substring
-     *
+     * <p>
      * Description:
      * - Replace all occurrences of a target substring with a replacement substring in the given string.
-     *
+     * <p>
      * Method Signature:
      * - public static String replaceSubstring(String str, String target, String replacement)
-     *
+     * <p>
      * TODO:
      * - Use the `replace()` or `replaceAll()` method to perform the replacement.
      * - Return the modified string.
@@ -155,31 +159,31 @@ public class Task_Strings {
 
     /**
      * Task 6: Check if a String is a Palindrome
-     *
+     * <p>
      * Description:
      * - Determine whether the given string is a palindrome (reads the same forwards and backwards).
-     *
+     * <p>
      * Method Signature:
      * - public static boolean isPalindrome(String str)
-     *
+     * <p>
      * TODO:
      * - Reverse the string and compare it to the original.
      * - Return true if they are identical, false otherwise.
      */
     public static boolean isPalindrome(String str) {
         // TODO: Implement logic to check if the string is a palindrome.
-        return  false; // Placeholder return value
+        return false; // Placeholder return value
     }
 
     /**
      * Task 7: Reverse a String
-     *
+     * <p>
      * Description:
      * - Reverse the order of characters in the given string.
-     *
+     * <p>
      * Method Signature:
      * - public static String reverseString(String str)
-     *
+     * <p>
      * TODO:
      * - Use a loop to iterate through the string backwards and build the reversed string.
      * - Return the reversed string.
@@ -191,7 +195,7 @@ public class Task_Strings {
 //"Jeena" ""+a+n+e+e+J
         String reverse = "";
 
-        for (int i = str.length()-1; i >=0 ; i--) {
+        for (int i = str.length() - 1; i >= 0; i--) {
 
             char c = str.charAt(i);
 
@@ -202,13 +206,13 @@ public class Task_Strings {
 
     /**
      * Task 8: Count Vowels in a String
-     *
+     * <p>
      * Description:
      * - Count the number of vowels (a, e, i, o, u) in the given string.
-     *
+     * <p>
      * Method Signature:
      * - public static int countVowels(String str)
-     *
+     * <p>
      * TODO:
      * - Iterate through the string and count vowels.
      * - Return the total count.
@@ -217,10 +221,11 @@ public class Task_Strings {
     public static int countVowels(String str) {
 
         str = str.toLowerCase();
-        int count =0;
-        for (int i = 0; i< str.length();i++){            char c = str.charAt(i);
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
             System.out.println(c);
-            if(c=='a' || c=='i' || c=='e' || c=='o' || c=='u'){
+            if (c == 'a' || c == 'i' || c == 'e' || c == 'o' || c == 'u') {
                 count++;
             }
 
@@ -232,13 +237,13 @@ public class Task_Strings {
 
     /**
      * Task 9: Find Index of a Character
-     *
+     * <p>
      * Description:
      * - Find the index of the first occurrence of a specified character in the string.
-     *
+     * <p>
      * Method Signature:
      * - public static int findIndexOfChar(String str, char ch)
-     *
+     * <p>
      * TODO:
      * - Use the `indexOf()` method to find the character's index.
      * - Return the index, or -1 if the character is not found.
@@ -250,13 +255,13 @@ public class Task_Strings {
 
     /**
      * Task 10: Extract a Substring
-     *
+     * <p>
      * Description:
      * - Extract a substring from the given string between specified start and end indices.
-     *
+     * <p>
      * Method Signature:
      * - public static String extractSubstring(String str, int start, int end)
-     *
+     * <p>
      * TODO:
      * - Use the `substring()` method to extract the desired portion.
      * - Handle potential `IndexOutOfBoundsException`.
@@ -264,18 +269,18 @@ public class Task_Strings {
      */
     public static String extractSubstring(String str, int start, int end) {
         // TODO: Implement logic to extract a substring from the string.
-        return str.substring(start,end); // Placeholder return value
+        return str.substring(start, end); // Placeholder return value
     }
 
     /**
      * Task 11: Split a String by Delimiter
-     *
+     * <p>
      * Description:
      * - Split the given string into an array of substrings based on a specified delimiter.
-     *
+     * <p>
      * Method Signature:
      * - public static String[] splitString(String str, String delimiter)
-     *
+     * <p>
      * TODO:
      * - Use the `split()` method to divide the string.
      * - Return the resulting array of substrings.
@@ -287,13 +292,13 @@ public class Task_Strings {
 
     /**
      * Task 12: Trim Whitespace from a String
-     *
+     * <p>
      * Description:
      * - Remove leading and trailing whitespace from the given string.
-     *
+     * <p>
      * Method Signature:
      * - public static String trimWhitespace(String str)
-     *
+     * <p>
      * TODO:
      * - Use the `trim()` method to eliminate extra spaces.
      * - Return the trimmed string.
@@ -305,13 +310,13 @@ public class Task_Strings {
 
     /**
      * Task 13: Compare Two Strings (Case-Sensitive)
-     *
+     * <p>
      * Description:
      * - Compare two strings for equality, considering case differences.
-     *
+     * <p>
      * Method Signature:
      * - public static boolean compareStrings(String str1, String str2)
-     *
+     * <p>
      * TODO:
      * - Use the `equals()` method to compare the strings.
      * - Return true if they are identical, false otherwise.
@@ -325,13 +330,13 @@ public class Task_Strings {
 
     /**
      * Task 14: Check if a String Contains a Substring
-     *
+     * <p>
      * Description:
      * - Determine whether the given string contains a specified substring.
-     *
+     * <p>
      * Method Signature:
      * - public static boolean containsSubstring(String str, String substring)
-     *
+     * <p>
      * TODO:
      * - Use the `contains()` method to check for the substring.
      * - Return true if found, false otherwise.
@@ -343,13 +348,13 @@ public class Task_Strings {
 
     /**
      * Task 15: Convert String to Character Array
-     *
+     * <p>
      * Description:
      * - Convert the given string into an array of characters.
-     *
+     * <p>
      * Method Signature:
      * - public static char[] convertToCharArray(String str)
-     *
+     * <p>
      * TODO:
      * - Use the `toCharArray()` method to perform the conversion.
      * - Return the resulting character array.
@@ -361,13 +366,13 @@ public class Task_Strings {
 
     /**
      * Task 16: Remove Duplicates from a String
-     *
+     * <p>
      * Description:
      * - Remove duplicate characters from the given string and return a new string with unique characters.
-     *
+     * <p>
      * Method Signature:
      * - public static String removeDuplicates(String str)
-     *
+     * <p>
      * TODO:
      * - Iterate through the string and build a new string with only unique characters.
      * - Consider using a `StringBuilder` and checking for existing characters.
@@ -380,13 +385,13 @@ public class Task_Strings {
 
     /**
      * Task 17: Capitalize the First Letter of Each Word
-     *
+     * <p>
      * Description:
      * - Capitalize the first letter of each word in the given string.
-     *
+     * <p>
      * Method Signature:
      * - public static String capitalizeFirstLetter(String str)
-     *
+     * <p>
      * TODO:
      * - Split the string into words.
      * - Capitalize the first letter of each word.
@@ -400,13 +405,13 @@ public class Task_Strings {
 
     /**
      * Task 18: Count Frequency of a Character in a String
-     *
+     * <p>
      * Description:
      * - Count how many times a specific character appears in the given string.
-     *
+     * <p>
      * Method Signature:
      * - public static int countFrequency(String str, char ch)
-     *
+     * <p>
      * TODO:
      * - Iterate through the string and count occurrences of the specified character.
      * - Return the total count.
@@ -418,13 +423,13 @@ public class Task_Strings {
 
     /**
      * Task 19: Find the First Non-Repeating Character
-     *
+     * <p>
      * Description:
      * - Identify and return the first character in the string that does not repeat.
-     *
+     * <p>
      * Method Signature:
      * - public static char firstNonRepeatingChar(String str)
-     *
+     * <p>
      * TODO:
      * - Use a data structure to track character counts.
      * - Iterate through the string to find the first character with a count of one.
@@ -437,22 +442,32 @@ public class Task_Strings {
 
     /**
      * Task 20: Check if Two Strings are Anagrams
-     *
+     * <p>
      * Description:
      * - Determine whether two strings are anagrams (contain the same characters in a different order).
-     *
+     * <p>
      * Method Signature:
      * - public static boolean areAnagrams(String str1, String str2)
-     *
+     * <p>
      * TODO:
      * - Remove whitespace and convert both strings to the same case.
      * - Sort the characters of both strings.
      * - Compare the sorted strings for equality.
      * - Return true if they are anagrams, false otherwise.
      */
-    public static boolean areAnagrams(String str1, String str2) {
+    public static <equals> boolean areAnagrams(String str1, String str2) {
         // TODO: Implement logic to check if two strings are anagrams.
-        return false; // Placeholder return value
-    }
-}
+        str1 = str1.trim().toLowerCase();
+        str2 = str2.trim().toLowerCase();
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
 
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        return Arrays.equals(charArray1, charArray2);
+
+
+    }
+
+}
