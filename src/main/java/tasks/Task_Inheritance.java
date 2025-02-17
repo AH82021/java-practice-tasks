@@ -168,6 +168,33 @@ public class Task_Inheritance {
 
 
             }
+            //dvd bass class
+
+
+        //magazine subclass
+        class magazine extends LibraryItem{
+            private int issueNumber;
+           private String publicationMonth;
+           //
+            public magazine(String title, String itemId,int issueNumber, String publicationMonth) {
+                super(title,itemId);
+            }
+            //
+
+
+            public int getIssueNumber() {
+                return issueNumber;
+            }
+
+            public String getPublicationMonth() {
+                return publicationMonth;
+            }
+            //
+
+
+
+        }
+
 
 
 
@@ -185,8 +212,7 @@ public class Task_Inheritance {
 
 
 
-/*
-        // Create a DVD instance
+    // Create a DVD instance
         DVD dvd = new DVD("Inception", "D001", "Christopher Nolan", 148);
         System.out.println("\nDVD Title: " + dvd.getTitle());
         System.out.println("Director: " + dvd.getDirector());
@@ -202,7 +228,7 @@ public class Task_Inheritance {
 
 
 
-         */
+
         }
     }
 
