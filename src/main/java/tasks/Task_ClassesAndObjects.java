@@ -26,7 +26,24 @@ package tasks;
  *      - `color` (String): The color of the car.
  *      - `mileage` (double): The current mileage of the car.
  *
- *    - **Constructor:**
+ *    - **Constructor:* Task: Classes & Objects (Practical Example)
+ *
+ * Title: **Car Management System**
+ *
+ * Goal:
+ * - **Understand the fundamentals of classes and objects in Java** by creating a `Car` class.
+ * - **Practice creating objects**, accessing fields, and invoking methods to manipulate object state.
+ *
+ * Overview:
+ * In this task, you will design and implement a simple **Car Management System** using Java's object-oriented programming (OOP) principles. This exercise will help you grasp how to define a class with attributes (fields) and behaviors (methods), instantiate objects from that class, and interact with those objects to perform various actions.
+ *
+ * Task Description:
+ * You are to create a `Car` class that models real-world cars with specific attributes and behaviors. Then, using this class, you will create multiple `Car` objects and demonstrate their interactions through various methods.
+ *
+ * Step-by-Step Guidance:
+ *
+ * 1. **Define the `Car` Class**
+ ***
  *      - Initialize all the fields when a new `Car` object is created.
  *        ```java
  *        public Car(String make, String model, int year, String color, double mileage) {
@@ -179,32 +196,68 @@ package tasks;
  * - **Refer to Documentation:**
  *   - Utilize Jav
 
+package tasks;
 
-        // Example Usage:
+public class Car {
+    private String make;
+    private String model;
+    private int year;
+    private String color;
+    private double mileage;
 
-        /*
-        // Creating Car objects
+    public Car(String make, String model, int year, String color, double mileage) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.mileage = mileage;
+    }
+
+    public void startEngine() {
+        System.out.println("Engine started for " + make + " " + model);
+    }
+
+    public void stopEngine() {
+        System.out.println("Engine stopped for " + make + " " + model);
+    }
+
+    public void drive(double miles) {
+        if (miles > 0) {
+            this.mileage += miles;
+            System.out.println("Mileage after driving: " + this.mileage);
+        } else {
+            System.out.println("Invalid mileage. Miles driven must be positive.");
+        }
+    }
+
+    public void repaint(String newColor) {
+        if (newColor != null && !newColor.isEmpty()) {
+            this.color = newColor;
+            System.out.println("Car repainted to " + this.color);
+        } else {
+            System.out.println("Invalid color. Color cannot be null or empty.");
+        }
+    }
+
+    public void displayInfo() {
+        System.out.println("Car Info: " + make + " " + model + ", Year: " + year + ", Color: " + color + ", Mileage: " + mileage);
+    }
+
+    public static void main(String[] args) {
         Car car1 = new Car("Toyota", "Camry", 2020, "Red", 15000.5);
         Car car2 = new Car("Honda", "Civic", 2018, "Blue", 30000.0);
 
-        // Interacting with car1
         car1.startEngine();
         car1.drive(120.5);
         car1.repaint("Black");
         car1.displayInfo();
 
-        // Interacting with car2
         car2.startEngine();
         car2.drive(200.0);
         car2.stopEngine();
         car2.displayInfo();
-        */
-//    }
-//}
+    }
+}
 
-/**
- * Class: Car
- *
- * Description:
- *   Represents a car with basic attributes and behaviors.
+
 
