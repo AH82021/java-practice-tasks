@@ -1,8 +1,6 @@
 package tasks;
 
 
-import org.w3c.dom.ls.LSOutput;
-
 /**
  * Task: Inheritance (Practical Example)
  *
@@ -26,18 +24,18 @@ import org.w3c.dom.ls.LSOutput;
  *         - `public void returnItem()`
  *
  *   2. **Create Derived Classes** that extend `LibraryItem`:
- *       - **`Book` Class**:
- *         - **Additional Fields**:
+ *       - *Additional Fields**:
  *           - `private String author;`
  *           - `private int numPages;`
  *         - **Constructor**:
  *           - Initialize all fields, including those from `LibraryItem`.
  *         - **Methods**:
  *           - `public String getAuthor()`
- *           - `public int getNumPages()`
+ *           - `public int getNumPages()`*`Book` Class**:
+ *  *  *         - **
  *           - Override `checkout()` and `returnItem()` if needed.
  *
- *       - **`DVD` Class**:
+ *       - **`` DVD Class**:
  *         - **Additional Fields**:
  *           - `private String director;`
  *           - `private int duration;` // duration in minutes
@@ -136,12 +134,12 @@ public class Task_Inheritance {
                 return itemId;
             }
 
-            public void checkout() {
-                return;
+            public String checkout() {
+                return null;
             }
 
-            public void returnItem() {
-                return;
+            public String returnItem() {
+                return null;
             }
 
             //subclass BOOK
@@ -162,6 +160,20 @@ public class Task_Inheritance {
                     return numPages;
 
                 }
+                // Override Methods if needed
+                @Override
+                public void checkout() {
+                    super.checkout();
+                    // Additional logic for checking out a book if needed
+                }
+
+                @Override
+                public void returnItem() {
+                    super.returnItem();
+                    // Additional logic for returning a book if needed
+                }
+                    }
+                }
 
 
             }
@@ -169,6 +181,39 @@ public class Task_Inheritance {
 
             }
             //dvd bass class
+        class DVD extends LibraryItem{
+
+
+            private String director;
+            private int duration;
+            //
+            public DVD(String title, String itemId, String director, int duration) {
+                super(title, itemId);
+
+            }
+
+
+            public String getDirector() {
+                return director;
+            }
+            public String getDuration(){
+
+            }
+
+            // Override Methods if needed
+            @Override
+            public void checkout() {
+                super.checkout();
+                // Additional logic for checking out a DVD if needed
+            }
+
+            @Override
+            public void returnItem() {
+                super.returnItem();
+                // Additional logic for returning a DVD if needed
+            }
+
+        }
 
 
         //magazine subclass
@@ -179,7 +224,8 @@ public class Task_Inheritance {
             public magazine(String title, String itemId,int issueNumber, String publicationMonth) {
                 super(title,itemId);
             }
-            //
+
+
 
 
             public int getIssueNumber() {
@@ -189,7 +235,22 @@ public class Task_Inheritance {
             public String getPublicationMonth() {
                 return publicationMonth;
             }
-            //
+
+            // Override Methods if needed
+            @Override
+            public void checkout() {
+                super.checkout();
+                // Additional logic for checking out a magazine if needed
+            }
+
+            @Override
+            public void returnItem() {
+                super.returnItem();
+                // Additional logic for returning a magazine if needed
+            }
+
+
+
 
 
 
@@ -199,7 +260,6 @@ public class Task_Inheritance {
 
 
             // Example (pseudo-code):
-
 
 
  // Create a Book instance
