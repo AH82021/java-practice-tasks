@@ -47,8 +47,8 @@ package tasks;
  *         - Observe h
  */
 public interface drawabl{ 
-public void draw(); 
-    public int area();
+void draw(); 
+int area();
 }
 
 public class Shape implements drawabl {
@@ -56,24 +56,42 @@ public class Shape implements drawabl {
 public int radius;
 public int width;
 public int hight;
-public void draw ();
-{
-System.out.println("Drawing a shape");
-}
+Constructor for Shape
+    public Shape() {}
+
+    // Constructor for Circle
+    public Shape(int radius) {
+        this.radius = radius;
+    }
+
+    // Constructor for Rectangle
+    public Shape(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a shape");
+    }
+
+    @Override
+    public int area() {
+        return 0; // Placeholder, since Shape is a general class
 public class Circle extends Shape {
 public void draw() ;{
     
-System.out.println("Drawing a Circle"+radius);
-}
+System.out.println("Drawing a Circle with"+radius);
+}public int area ();  returan (int) Math.PI * radius * radius);                                         
 public class Rectangle extends Shape {
 public int area() {
-System. out println("Drawing a Rectangle"+width+hight);
-} 
+System. out println("Drawing a Rectangle with width and hight"+width+hight);
+} public int area(){ return width*higth;
 }
 public static void main(String[] args) {
 }
-Shape Shape1 = new Shape("int radius", 23);
-Shape Shape2 = new Shape("int width", 34, "int hight", 45);
+Shape Shape1 = new Circle("int radius", 23);
+Shape Shape2 = new Rectangle("int width", 34, "int hight", 45);
 drawable drawblel = drawblel;
 drawble drawble2 = drawble2;
 drawble1. void draw();  
