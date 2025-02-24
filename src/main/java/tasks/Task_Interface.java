@@ -25,15 +25,15 @@ package tasks;
  */
 public class Drinkable {
 
-    public void Drink();
+    public void drink();
     public void filter();
 }
     public class water implements Drinkable {
       String bottle;
       String filter;
     }
-@override;
- public void Drink(){
+@overriding;
+ public void drink(){
      System.out.println(""water is drunked" +"by me");
  }
     
@@ -42,18 +42,18 @@ public void filter(){
     
 }
  public class juice implements Drinkable{
-     @override;
- public void Drink(){
+     @overriding;
+ public void drink(){
    System.out.println("i am drinking a" +"bottle of"+"juice. ")
        }
     public void filter(){
         System.out.println("the juice is filtered.")
 } 
      public static void main(String[] args) {
-         Drinkable Drinkable1 = new Drinkable();
-         Drinkable Drinkable2 = new Drinkable();
-         Drinkable1.Drink();
-         Drinkable1.filter();
-         Drinkable2.Drink();
-         Drinkable2.filter();
+         Drinkable drinkable1 = new water();
+         Drinkable drinkable2 = new juice();
+         drinkable1.drink();
+         drinkable1.filter();
+         drinkable2.drink();
+         drinkable2.filter();
      }
