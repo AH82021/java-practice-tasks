@@ -23,113 +23,37 @@ package tasks;
  * - Interfaces cannot have instance variables but can have `public static final` constants.
  * - All methods in an interface are `public` and `abstract` by default.
  */
-public interface Task_Interface {
+public class Drinkable {
 
-    /**
-     * Task 1: Define an Interface
-     *
-     * Description:
-     * - Define an interface with a few method signatures that classes must implement.
-     *
-     * TODO:
-     * - Declare methods without implementation.
-     */
-
-    // Method to start a task
-    void startTask();
-
-    // Method to execute a task
-    void executeTask();
-
-    // Method to complete a task
-    void completeTask();
-
-    // Method to get task details
-    String getTaskDetails();
+    public void Drink();
+    public void filter();
 }
-
-/**
- * Task 2: Implement the Interface in a Class
- *
- * Description:
- * - Implement the interface in a class and provide method implementations.
- */
-class BasicTask implements Task_Interface {
-
-    @Override
-    public void startTask() {
-        // TODO: Implement logic to start a task
+    public class water implements Drinkable {
+      String bottle;
+      String filter;
     }
-
-    @Override
-    public void executeTask() {
-        // TODO: Implement logic to execute a task
-    }
-
-    @Override
-    public void completeTask() {
-        // TODO: Implement logic to complete a task
-    }
-
-    @Override
-    public String getTaskDetails() {
-        // TODO: Return task details as a string
-        return "Basic Task Details";
-    }
+@override;
+ public void Drink(){
+     System.out.println(""water is drunked" +"by me");
+ }
+    
+public void filter(){
+        System.out.println("One bottle water is being filtering");
+    
 }
-
-/**
- * Task 3: Implement the Interface in Another Class
- *
- * Description:
- * - Create another class that implements the interface differently.
- */
-class AdvancedTask implements Task_Interface {
-
-    @Override
-    public void startTask() {
-        // TODO: Implement advanced logic to start a task
-    }
-
-    @Override
-    public void executeTask() {
-        // TODO: Implement advanced logic to execute a task
-    }
-
-    @Override
-    public void completeTask() {
-        // TODO: Implement advanced logic to complete a task
-    }
-
-    @Override
-    public String getTaskDetails() {
-        // TODO: Return advanced task details as a string
-        return "Advanced Task Details";
-    }
-}
-
-/**
- * Task 4: Demonstrate Polymorphism
- *
- * Description:
- * - Use a main method to create instances of both classes and call interface methods.
- */
-class TaskDemo {
-    public static void main(String[] args) {
-        // TODO: Instantiate objects and call interface methods
-
-        Task_Interface task1 = new BasicTask();
-        Task_Interface task2 = new AdvancedTask();
-
-        task1.startTask();
-        task1.executeTask();
-        task1.completeTask();
-        System.out.println(task1.getTaskDetails());
-
-        task2.startTask();
-        task2.executeTask();
-        task2.completeTask();
-        System.out.println(task2.getTaskDetails());
-    }
-}
-
+ public class juice implements Drinkable{
+     @override;
+ public void Drink(){
+   System.out.println("i am drinking a" +"bottle of"+"juice. ")
+       }
+    public void filter(){
+        System.out.println("the juice is filtered.")
+} 
+     public static void main(String[] args) {
+         Drinkable Drinkable1 = new Drinkable();
+         Drinkable Drinkable2 = new Drinkable();
+         Drinkable1.Drink();
+         Drinkable1.filter();
+         Drinkable2.Drink();
+         Drinkable2.filter();
+     }
