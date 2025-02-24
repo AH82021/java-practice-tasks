@@ -161,6 +161,9 @@ public class Task_Strings {
      * - Return true if they are identical, false otherwise.
      */
     public static boolean isPalindrome(String str) {
+        if (str == null){
+            return false;
+        }
         // TODO: Implement logic to check if the string is a palindrome.
         return false; // Placeholder return value
     }
@@ -196,9 +199,9 @@ public class Task_Strings {
      * - Iterate through the string and count vowels.
      * - Return the total count.
      */
-    public static int countVowels(String str) {
+    public static int countVowels(int str) {
         // TODO: Implement logic to count vowels in the string.
-        return 0; // Placeholder return value
+        return str; // Placeholder return value
     }
 
     /**
@@ -215,7 +218,14 @@ public class Task_Strings {
      * - Return the index, or -1 if the character is not found.
      */
     public static int findIndexOfChar(String str, char ch) {
+        for (int i = 0; i < str.length(); i++) {
+//            if (str[i] == ch) {
+//                return i;
+//            }
+        }
+
         // TODO: Implement logic to find the index of a character.
+//        public static String extractsubstring(String str, int start.int end)
         return -1; // Placeholder return value
     }
 

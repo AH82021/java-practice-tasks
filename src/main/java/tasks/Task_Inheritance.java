@@ -105,6 +105,9 @@ public class Task_Inheritance {
 
     public static void main(String[] args) {
         // TODO: Create and test your LibraryItem classes here.
+        Book book=new Book("Efective java","B001"," joshua Bloch",416);
+        System.out.println("Book Title:" + book.getAuthor());
+
 
         // Example (pseudo-code):
 
@@ -152,6 +155,10 @@ class LibraryItem {
         this.itemId = itemId;
         this.isCheckedOut = false;
     }
+    public  void setCheckedOut(){
+
+    }
+
 
     /**
      * Get the title of the library item
@@ -181,6 +188,7 @@ class LibraryItem {
         } else {
             System.out.println(title + " is already checked out.");
         }
+
     }
 
     /**
@@ -234,6 +242,7 @@ class Book {
     public int getNumPages() {
         return numPages;
     }
+
 
     // Optionally override checkout and returnItem if needed
 }
@@ -320,4 +329,5 @@ class Magazine {
     }
 
     // Optionally override checkout and returnItem if needed
+
 }

@@ -19,28 +19,28 @@ public class Tasks_MultipleStringChallenges {
         String input1 = "ahmad";
         String output1 = capitalizeFirstLetter(input1);
         System.out.println("Input: " + input1 + " | Output: " + output1);
-        System.out.println();
+        System.out.println(toUpperCase().indexOf(0,1));
 
         // 2. Reverse a String
         System.out.println("Task 2: Reverse a String");
         String input2 = "Java";
         String output2 = reverseString(input2);
         System.out.println("Input: " + input2 + " | Output: " + output2);
-        System.out.println();
+        System.out.println(reverseString(input2));
 
         // 3. Count Vowels
         System.out.println("Task 3: Count Vowels");
         String input3 = "Hello World";
         int vowelCount = countVowels(input3);
         System.out.println("Input: " + input3 + " | Vowel Count: " + vowelCount);
-        System.out.println();
+        System.out.println(countVowels(input3));
 
         // 4. Check Palindrome
         System.out.println("Task 4: Check Palindrome");
         String input4 = "racecar";
         boolean isPal = isPalindrome(input4);
         System.out.println("Input: " + input4 + " | Is Palindrome? " + isPal);
-        System.out.println();
+        System.out.println(isPalindrome(input4));
 
         // 5. Remove Whitespace
         System.out.println("Task 5: Remove Whitespace");
@@ -48,12 +48,12 @@ public class Tasks_MultipleStringChallenges {
         String output5 = removeWhitespace(input5);
         System.out.println("Original: [" + input5 + "]");
         System.out.println("Whitespace Removed: [" + output5 + "]");
-        System.out.println();
+        System.out.println(removeWhitespace(input5));
 
         // 6. Convert to Uppercase
         System.out.println("Task 6: Convert to Uppercase");
         String input6 = "hello world";
-        String output6 = toUpperCase(input6);
+        String output6 = toUpperCase();
         System.out.println("Input: " + input6 + " | Output: " + output6);
         System.out.println();
 
@@ -224,7 +224,7 @@ public class Tasks_MultipleStringChallenges {
      *   1. Check if input is null -> return input.
      *   2. Use input.toUpperCase() if allowed, or loop through each character and convert manually.
      */
-    public static String toUpperCase(String input) {
+    public static String toUpperCase() {
         // TODO: Implement logic
         return null;
     }
