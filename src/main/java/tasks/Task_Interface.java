@@ -28,7 +28,7 @@ public class Drinkable {
     public void drink();
     public void filter();
 }
-    public class water implements Drinkable {
+     class water implements Drinkable {
       String bottle;
       String filter;
     }
@@ -41,7 +41,7 @@ public void filter(){
         System.out.println("One bottle water is being filtering");
     
 }
- public class juice implements Drinkable{
+  class juice implements Drinkable{
      @overriding;
  public void drink(){
    System.out.println("i am drinking a" +"bottle of"+"juice. ")
